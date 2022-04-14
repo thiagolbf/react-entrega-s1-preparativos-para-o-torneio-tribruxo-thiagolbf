@@ -1,6 +1,6 @@
 import "./style.css";
 
-function Students({ students, fn }) {
+function Students({ students, fnStudents }) {
   return (
     <div className="aleatoryStudents">
       {students.map((value, index) => {
@@ -13,7 +13,7 @@ function Students({ students, fn }) {
         );
       })}
 
-      <button onClick={() => fn()}> Sortear Novamente</button>
+      <button onClick={() => fnStudents()}> Sortear Novamente</button>
     </div>
   );
 }
