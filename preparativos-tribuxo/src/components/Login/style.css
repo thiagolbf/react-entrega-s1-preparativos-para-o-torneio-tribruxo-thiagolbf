@@ -1,0 +1,13 @@
+button {
+  display: block;
+  height: 30px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: purple;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(128, 130, 228);
+}
