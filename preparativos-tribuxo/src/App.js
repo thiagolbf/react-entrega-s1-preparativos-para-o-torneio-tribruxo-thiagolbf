@@ -11,9 +11,10 @@ function App() {
   useEffect(() => {
     fetch("http://hp-api.herokuapp.com/api/characters/students")
       .then((response) => response.json())
-      .then((response) =>
-        setCharacters(response.filter((aluno) => aluno["house"] !== ""))
-      )
+      .then((response) => setCharacters(response))
+      //   setCharacters(response.filter((aluno) => aluno["house"] !== ""))
+      // )
+
       .catch((err) => console.log(err));
   }, []);
 
