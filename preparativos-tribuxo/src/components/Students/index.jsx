@@ -1,9 +1,9 @@
 import "./style.css";
 
-function Students(students, fnStudents) {
+function Students({ alunos, fnAlunos }) {
   return (
     <div className="aleatoryStudents">
-      {students.map((value, index) => {
+      {alunos.map((value, index) => {
         return (
           <div key={index}>
             <p>{value.name}</p>
@@ -13,7 +13,7 @@ function Students(students, fnStudents) {
         );
       })}
 
-      <button onClick={() => fnStudents()}> Sortear Novamente</button>
+      <button onClick={() => fnAlunos()}> Sortear Novamente</button>
     </div>
   );
 }
