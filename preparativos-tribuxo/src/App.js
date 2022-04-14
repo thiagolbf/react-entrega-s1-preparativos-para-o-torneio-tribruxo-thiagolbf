@@ -17,13 +17,15 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
+  console.log(characters);
+
   function sorteados() {
     const alunosSorteados = [];
 
     while (alunosSorteados.length < 3) {
       const sorteado = Math.floor(Math.random() * characters.length);
       const casaAleatorio = characters[sorteado].house;
-
+      console.log(casaAleatorio);
       const check = alunosSorteados.some((aluno) => {
         return aluno.house === casaAleatorio;
       });
