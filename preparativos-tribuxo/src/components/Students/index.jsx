@@ -1,6 +1,6 @@
 import "./style.css";
 
-function Students({ students, fnStudents }) {
+function Students(students, fnStudents) {
   return (
     <div className="aleatoryStudents">
       {students.map((value, index) => {
