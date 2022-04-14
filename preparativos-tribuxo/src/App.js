@@ -12,7 +12,7 @@ function App() {
     fetch("http://hp-api.herokuapp.com/api/characters/students")
       .then((response) => response.json())
       .then((response) =>
-        setCharacters(response.filter((aluno) => aluno.house !== ""))
+        setCharacters(response.filter((aluno) => aluno["house"] !== ""))
       )
       .catch((err) => console.log(err));
   }, []);
