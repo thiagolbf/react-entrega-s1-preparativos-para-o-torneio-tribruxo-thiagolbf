@@ -9,7 +9,7 @@ function App() {
   const [aleatory, setAleatory] = useState([]);
 
   useEffect(() => {
-    fetch("https://hp-api.herokuapp.com/api/characters/students")
+    fetch("hp-api.herokuapp.com/api/characters/students")
       .then((response) => response.json())
       .then((response) => setCharacters(response))
       //   setCharacters(response.filter((aluno) => aluno["house"] !== ""))
