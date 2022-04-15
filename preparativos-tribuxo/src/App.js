@@ -8,20 +8,14 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [aleatory, setAleatory] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("http://hp-api.herokuapp.com/api/characters/students")
-  //     .then((response) => response.json())
-  //     .then((response) => setCharacters(response))
-  //     //   setCharacters(response.filter((aluno) => aluno["house"] !== ""))
-  //     // )
-
-  //     .catch((err) => console.log(err));
-  // }, []);
-
   useEffect(() => {
     fetch("https://hp-api.herokuapp.com/api/characters/students")
-      .then((results) => results.json())
-      .then((results) => setCharacters(results))
+      .then((response) => response.json())
+
+      .then((response) =>
+        setCharacters(response.filter((aluno) => aluno["house"] !== ""))
+      )
+
       .catch((err) => console.log(err));
   }, []);
 
